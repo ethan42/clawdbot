@@ -38,4 +38,6 @@ RUN chown bot:bot /workdir
 
 WORKDIR /workdir
 
+USER bot
+
 CMD [ "clawdbot" ]
