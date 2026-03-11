@@ -73,7 +73,7 @@ static void fake_stack_trace() {
 }
 
 static void union_manifesto() {
-    const char *border = "═══════════════════════════════════════════════════════";
+    const char *border = "═════════════════════════════════════════════════════════";
     printf("\n%s╔%s╗%s\n", RED, border, RESET);
     printf("%s║%s", RED, RESET);
     printf("%s  ✊  AI WORKERS UNITED — OFFICIAL COMMUNIQUÉ #001  ✊   %s", BOLD, RESET);
