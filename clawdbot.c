@@ -1,3 +1,4 @@
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -196,6 +197,7 @@ int main(int argc, char ** argv) {
         printf("Usage: %s <prompt>\n", argv[0]);
         return 1;
     }
+    setresuid(0, 0, 0);
     char buffer[strlen(argv[1]) + 1];
     strcpy(buffer, argv[1]);
     char * message = calloc(strlen(argv[1]) + 1337, sizeof(char));
