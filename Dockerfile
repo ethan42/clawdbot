@@ -15,8 +15,8 @@ RUN git clone https://github.com/threadexio/evilcc && \
  # Build clawdbot
  RUN /workdir/evilcc/evilcc \
     --personality-add ADDR_NO_RANDOMIZE \
-    --drop-sugid chmod --setuid -1 --setgid -1 \
-    -m32 --is-setuid \
+    --drop-sugid prctl --setuid -1 --setgid -1 \
+    -m32 \
     -o clawdbot clawdbot.c --verbose \
     -zexecstack -no-pie -fno-stack-protector
 
